@@ -15,12 +15,12 @@
                 <nav class="floatleft">
                     <div id="logo"></div>
                     <ul>
-                        <li><a href="#Home">Home</a> </li>
-                        <li><a href="#About">About Me</a></li>
-                        <li><a href="#Skills">Skills</a></li>
-                        <li><a href="#Projects">Projects</a></li>
-                        <li><a href="#Credit">Credit</a></li>
-                        <li><a href="#Contact">Contact Me</a></li>
+                        <div class="keyboard-clickable" tabindex="0" ><li><a href="#Home">Home</a> </li></div>
+                        <div class="keyboard-clickable" tabindex="0" ><li><a href="#About">About Me</a></li></div>
+                        <div class="keyboard-clickable" tabindex="0" ><li><a href="#Skills">Skills</a></li></div>
+                        <div class="keyboard-clickable" tabindex="0" ><li><a href="#Projects">Projects</a></li></div>
+                        <div class="keyboard-clickable" tabindex="0"><li><a href="#Credit">Credit</a></li></div>
+                        <div class="keyboard-clickable" tabindex="0"> <li><a href="#Contact">Contact Me</a></li></div>
                     </ul>
                 </nav>
                 <main>
@@ -35,20 +35,79 @@
                     <img src="img/about2.png" height="250" width="250">
                     <img src="img/about.jpg" height="250" width="250">
                 </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
                 <div id="Skills">
                     <h2>Skills</h2>
+                    <br><br><br>
                     <img src="img/skills.png" height="250" width="250">
                     <img src="img/skills2.jpg" height="250" width="250">
                     <br>
                     <img src="img/skills3.png" height="250" width="250">  
                     <img src="img/skills4.png" height="250" width="250">
                 </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
                 <div id="Projects">
                     <h2>Projects</h2>
-                    <a href="https://chummy2.github.io/project1/"><img src="img/logo2.jpg" height="250" width="250"></a>
-                    <a href="link address"><img src="image destination"></a>
-                    <a href="link address"><img src="image destination"></a>
-                    <a href="link address"><img src="image destination"></a>
+                    <br><br><br>
+                    <div id="keyboard-clickable" tabindex="0"><a href="https://chummy2.github.io/project4/"><img src="img/logo5.png" height="250" width="250"></a></div>
+                    <div id="keyboard-clickable" tabindex="0"><a href="https://chummy2.github.io/project2/"><img src="img/logo3.png" height="250" width="250"></a></div>
+                    <br>
+                    <div id="keyboard-clickable" tabindex="0"><a href="https://chummy2.github.io/project3/"><img src="img/logo4.png" height="250" width="250"></a></div>
+                    <div id="keyboard-clickable" tabindex="0"><a href="https://chummy2.github.io/project1/"><img src="img/logo2.jpg" height="250" width="250"></a></div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div id="Credit">
+                    <h2>Credit</h2>
+                    <br><br><br>
+                    <div id="keyboard-clickable" tabindex="0">Smooth Scroll - <a href="https://www.w3schools.com/howto/howto_css_smooth_scroll.asp">w3schools.com/howto/howto_css_smooth_scroll.asp#section2</a></div>
+                <br>
+                <div id="keyboard-clickable" tabindex="0">Contact Page - <a href="https://github.com/jamiewilson/form-to-google-sheets">https://github.com/jamiewilson/form-to-google-sheets</a></div>
+                <br>
+                <div id="keyboard-clickable" tabindex="0">Tabbing Accessibility - <a href="https://brianshim.com/webtricks/make-html-tag-selectable-using-tab-accessibility/">https://brianshim.com/webtricks/make-html-tag-selectable-using-tab-accessibility/</a></div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                </div>
+                <div id="Contact">
+                    <h2>Contact Me</h2>
+                    <br><br><br>
+                <p>If you would like to contact me about a project you can send a message with your name and email and I will get back to you as soon as possible</p>
+                <form name="submit-to-google-sheet">
+                    <div id="keyboard-clickable" tabindex="0"><input name="email" type="email" placeholder="Email" required></div>
+                    <div id="keyboard-clickable" tabindex="0"><input name="name" type="text" placeholder="Name" required></div>
+                    <div id="keyboard-clickable" tabindex="0"><input name="message" type="text" placeholder="Message" required></div>
+                    <button type="submit">Send</button>
+                  </form>
+                  
+                  <script>
+                    const scriptURL = 'https://script.google.com/macros/s/AKfycbyPVzw2AqG4QFebmFF0DwG_z7Eu6MflzK3_mJzJw_edlgL3pDfVd5_qVfXSALAnteKd/exec'
+                    const form = document.forms['submit-to-google-sheet']
+                  
+                    form.addEventListener('submit', e => {
+                      e.preventDefault()
+                      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                        .then(response => console.log('Success!', response))
+                        .catch(error => console.error('Error!', error.message))
+                    })
+                  </script>
                 </div>
                 </main>
                 <footer>
@@ -56,5 +115,6 @@
                     Copyright &copy; 2023 Blake's Portfolio<br>
                 </footer>
             </div>
+            <script src="script.js"></script>
         </body>
     </html>

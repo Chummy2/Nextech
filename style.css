@@ -29,6 +29,7 @@ header a:hover{
 
 h1 {
     font-size:3em;
+    text-align: center;
 }
 
 h2{
@@ -56,7 +57,6 @@ nav {
     text-align: center;
     font-weight: bold;
     font-size: 1.5em;
-    padding-top: 5px;
     padding-bottom: 5px;
     position: fixed;
     
@@ -104,7 +104,7 @@ main h2,h3,h4,p,div,ul,dl {
 }
 
 .floatleft {
-    float: left;
+    
     padding-bottom: 2em;
 }
 
@@ -165,5 +165,11 @@ html{
     scroll-behavior: smooth;
 }
 #Projects{
+    text-align: center;
+}
+#Credit{
+    text-align: center;
+}
+#Contact{
     text-align: center;
 }
